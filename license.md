@@ -1,4 +1,4 @@
-**License text copyright © 2026, John Klitgaard**
+**Copyright ©2026, John Klitgaard (Silver Fern Consulting Ltd)**
 
 **Terms**
 The Licensor hereby grants you the right to copy, modify, create derivative works, redistribute, and make non-production use of the Licensed Work. The Licensor may make an Additional Use Grant, above, permitting limited production use.
@@ -22,6 +22,6 @@ To specify as the Change License the GPL Version 2.0 or any later version, or a 
 
 To either: (a) specify an additional grant of rights to use that does not impose any additional restriction on the right granted in this License, as the Additional Use Grant; or (b) insert the text “None” to specify a Change Date. Not to modify this License in any other way.
 
-Notice
+**Notice**
 The Business Source License (this document, or the “License”) is not an Open Source license. However, the Licensed Work will eventually be made available under an Open Source License, as stated in this License.
 
