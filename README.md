@@ -1,7 +1,6 @@
-## Control Mapper
+# Control Mapper
 
 **Maps organizational policy statements to compliance framework controls (NIST SP 800-53, ISO/IEC 27001:2022 Annex A, SOC 2), crosswalks the frameworks against each other, flags coverage gaps — and measures how often the AI gets it right.**
-![Crosswalk workbook: one policy mapped across NIST 800-53, ISO 27001, and SOC 2](assets/crosswalk-screenshot.png)
 
 Crosswalking a policy against one control framework is hours of manual, error-prone
 work in every GRC program. Doing it across *three* frameworks, and keeping the
@@ -69,7 +68,7 @@ gaps. Adding a framework is just another JSON file plus a gold set — no code c
 ## Quickstart
 
 ```bash
-git clone https://github.com/PilotGuy13/control-mapper && cd control-mapper
+git clone <your-repo-url> && cd control-mapper
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -139,6 +138,8 @@ Launch the **UI** (framework picker in the sidebar):
 
 ```bash
 streamlit run app.py
+
+![Streamlit UI: pick a framework, map a policy, and view coverage and gaps](assets/ui-screenshot.png)
 ```
 
 Run the **tests** (offline):
