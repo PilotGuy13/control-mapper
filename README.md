@@ -3,6 +3,7 @@
 **Maps organizational policy statements to compliance framework controls (NIST SP 800-53, ISO/IEC 27001:2022 Annex A, SOC 2), crosswalks the frameworks against each other, flags coverage gaps — and measures how often the AI gets it right.**
 
 Crosswalking a policy against one control framework is hours of manual, error-prone
+![Crosswalk workbook: one policy mapped across NIST 800-53, ISO 27001, and SOC 2](assets/crosswalk-screenshot.png)
 work in every GRC program. Doing it across *three* frameworks, and keeping the
 mappings consistent, is worse. This tool drafts those mappings with Claude, derives
 a cross-framework crosswalk from shared policy evidence, and then does the part that
