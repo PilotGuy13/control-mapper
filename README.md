@@ -1,5 +1,10 @@
 # Control Mapper
 
+![Crosswalk workbook: one policy mapped across NIST 800-53, ISO 27001, and SOC 2](assets/crosswalk-screenshot.png)
+
+
+
+
 **Maps organizational policy statements to compliance framework controls (NIST SP 800-53, ISO/IEC 27001:2022 Annex A, SOC 2), crosswalks the frameworks against each other, flags coverage gaps — and measures how often the AI gets it right.**
 
 Crosswalking a policy against one control framework is hours of manual, error-prone
