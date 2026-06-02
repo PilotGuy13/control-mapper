@@ -11,3 +11,7 @@ out.json
 .env.save
 .env.*
 !.env.example
+
+# generated outputs at repo root
+/*.xlsx
+/*.csv
