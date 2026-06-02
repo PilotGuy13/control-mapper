@@ -15,3 +15,7 @@ out.json
 # generated outputs at repo root
 /*.xlsx
 /*.csv
+
+/*.xlsx
+/*.csv
+~$*
