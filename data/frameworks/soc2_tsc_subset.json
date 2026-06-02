@@ -1,0 +1,133 @@
+{
+  "framework_id": "SOC2_TSC_2017",
+  "framework_name": "SOC 2 Trust Services Criteria (2017, rev. 2022) (subset)",
+  "source_note": "Criteria reference numbers (e.g. CC6.1) and category names are factual identifiers from the AICPA Trust Services Criteria. The TSC is copyrighted by the AICPA; the descriptions below are original condensed summaries written for this demo and are NOT the official AICPA criteria or points of focus. For authoritative wording, consult the AICPA publication.",
+  "controls": [
+    {
+      "id": "CC1.4",
+      "family": "Common Criteria - Control Environment",
+      "title": "Commitment to competence",
+      "description": "The entity demonstrates a commitment to attract, develop, and retain competent individuals in alignment with objectives, including relevant training."
+    },
+    {
+      "id": "CC2.2",
+      "family": "Common Criteria - Communication and Information",
+      "title": "Internal communication",
+      "description": "The entity internally communicates information, including security objectives and responsibilities, necessary to support the functioning of controls."
+    },
+    {
+      "id": "CC2.3",
+      "family": "Common Criteria - Communication and Information",
+      "title": "External communication",
+      "description": "The entity communicates with external parties regarding matters affecting the functioning of controls."
+    },
+    {
+      "id": "CC3.2",
+      "family": "Common Criteria - Risk Assessment",
+      "title": "Risk identification and analysis",
+      "description": "The entity identifies risks to the achievement of its objectives and analyzes them as a basis for determining how the risks should be managed."
+    },
+    {
+      "id": "CC4.1",
+      "family": "Common Criteria - Monitoring Activities",
+      "title": "Monitoring of controls",
+      "description": "The entity selects, develops, and performs evaluations to ascertain whether the components of internal control are present and functioning."
+    },
+    {
+      "id": "CC5.2",
+      "family": "Common Criteria - Control Activities",
+      "title": "Technology general controls",
+      "description": "The entity selects and develops general control activities over technology to support the achievement of objectives."
+    },
+    {
+      "id": "CC6.1",
+      "family": "Common Criteria - Logical and Physical Access",
+      "title": "Logical access security measures",
+      "description": "The entity implements logical access security software, infrastructure, and architectures to protect information assets from unauthorized access."
+    },
+    {
+      "id": "CC6.2",
+      "family": "Common Criteria - Logical and Physical Access",
+      "title": "User registration and authorization",
+      "description": "Prior to issuing credentials, the entity registers and authorizes new users, and removes access when no longer required."
+    },
+    {
+      "id": "CC6.3",
+      "family": "Common Criteria - Logical and Physical Access",
+      "title": "Access based on roles and responsibilities",
+      "description": "The entity authorizes, modifies, or removes access to data and resources based on roles, least privilege, and segregation of duties, with periodic review."
+    },
+    {
+      "id": "CC6.6",
+      "family": "Common Criteria - Logical and Physical Access",
+      "title": "Protection against external threats",
+      "description": "The entity implements controls to protect against threats from sources outside its system boundaries, including remote access protections."
+    },
+    {
+      "id": "CC6.7",
+      "family": "Common Criteria - Logical and Physical Access",
+      "title": "Restriction of information in transit",
+      "description": "The entity restricts the transmission, movement, and removal of information to authorized users and protects it during transmission."
+    },
+    {
+      "id": "CC6.8",
+      "family": "Common Criteria - Logical and Physical Access",
+      "title": "Prevention and detection of unauthorized software",
+      "description": "The entity implements controls to prevent or detect and act upon the introduction of unauthorized or malicious software."
+    },
+    {
+      "id": "CC7.1",
+      "family": "Common Criteria - System Operations",
+      "title": "Detection of vulnerabilities",
+      "description": "The entity uses detection and monitoring procedures to identify configuration changes and susceptibilities to newly discovered vulnerabilities."
+    },
+    {
+      "id": "CC7.2",
+      "family": "Common Criteria - System Operations",
+      "title": "Monitoring for anomalies",
+      "description": "The entity monitors system components for anomalies that are indicative of malicious acts, natural disasters, and errors, and evaluates whether they represent security events."
+    },
+    {
+      "id": "CC7.3",
+      "family": "Common Criteria - System Operations",
+      "title": "Evaluation of security events",
+      "description": "The entity evaluates security events to determine whether they could or have resulted in a failure to meet objectives and takes action accordingly."
+    },
+    {
+      "id": "CC7.4",
+      "family": "Common Criteria - System Operations",
+      "title": "Incident response",
+      "description": "The entity responds to identified security incidents by executing a defined incident response program to contain, remediate, and recover."
+    },
+    {
+      "id": "CC8.1",
+      "family": "Common Criteria - Change Management",
+      "title": "Change management",
+      "description": "The entity authorizes, designs, develops, tests, approves, and implements changes to infrastructure, data, software, and procedures."
+    },
+    {
+      "id": "CC9.1",
+      "family": "Common Criteria - Risk Mitigation",
+      "title": "Risk mitigation activities",
+      "description": "The entity identifies, selects, and develops risk mitigation activities for risks arising from potential business disruptions, including the use of insurance."
+    },
+    {
+      "id": "A1.2",
+      "family": "Availability",
+      "title": "Backup and recovery",
+      "description": "The entity authorizes, designs, develops, implements, and maintains environmental protections, backup processes, and recovery infrastructure to meet availability objectives."
+    },
+    {
+      "id": "C1.1",
+      "family": "Confidentiality",
+      "title": "Identification of confidential information",
+      "description": "The entity identifies and maintains information designated as confidential to meet its confidentiality objectives."
+    },
+    {
+      "id": "C1.2",
+      "family": "Confidentiality",
+      "title": "Protection of confidential information",
+      "description": "The entity protects confidential information, including during retention and through secure disposal, to meet its confidentiality objectives."
+    }
+  ]
+}

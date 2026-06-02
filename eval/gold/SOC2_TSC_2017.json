@@ -1,0 +1,32 @@
+{
+  "description": "Hand-labeled correct mappings for sample_policy.md against the SOC 2 Trust Services Criteria subset. Ground truth for the evaluation harness. Note P9 (cyber insurance) maps to CC9.1 here even though it is out of scope for the NIST and ISO subsets -- a concrete example of why a crosswalk matters.",
+  "framework_id": "SOC2_TSC_2017",
+  "policy_file": "data/sample_policies/sample_policy.md",
+  "mappings": [
+    {"statement_id": "P1", "control_id": "CC1.4", "coverage": "full"},
+    {"statement_id": "P1", "control_id": "CC2.2", "coverage": "partial"},
+
+    {"statement_id": "P2", "control_id": "CC6.1", "coverage": "full"},
+    {"statement_id": "P2", "control_id": "CC6.2", "coverage": "full"},
+    {"statement_id": "P2", "control_id": "CC6.3", "coverage": "partial"},
+
+    {"statement_id": "P3", "control_id": "CC6.1", "coverage": "full"},
+    {"statement_id": "P3", "control_id": "CC6.6", "coverage": "full"},
+
+    {"statement_id": "P4", "control_id": "CC6.1", "coverage": "full"},
+
+    {"statement_id": "P5", "control_id": "CC6.7", "coverage": "full"},
+    {"statement_id": "P5", "control_id": "C1.2", "coverage": "partial"},
+
+    {"statement_id": "P6", "control_id": "CC7.2", "coverage": "full"},
+
+    {"statement_id": "P7", "control_id": "CC7.3", "coverage": "full"},
+    {"statement_id": "P7", "control_id": "CC7.4", "coverage": "full"},
+
+    {"statement_id": "P8", "control_id": "CC7.1", "coverage": "full"},
+
+    {"statement_id": "P9", "control_id": "CC9.1", "coverage": "full"},
+
+    {"statement_id": "P10", "control_id": "A1.2", "coverage": "full"}
+  ]
+}

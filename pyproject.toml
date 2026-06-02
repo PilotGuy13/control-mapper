@@ -1,0 +1,10 @@
+[project]
+name = "control-mapper"
+version = "0.1.0"
+description = "Map organizational policy statements to compliance framework controls using Claude."
+requires-python = ">=3.10"
+dependencies = ["anthropic>=0.40.0", "pydantic>=2.6.0", "openpyxl>=3.1.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]

@@ -1,0 +1,133 @@
+{
+  "framework_id": "NIST_SP_800-53_R5",
+  "framework_name": "NIST SP 800-53 Rev. 5 (subset)",
+  "source_note": "Control identifiers and family names are from NIST SP 800-53 Rev. 5, a U.S. Government publication in the public domain. Descriptions below are condensed summaries written for this demo and are not the official control text.",
+  "controls": [
+    {
+      "id": "AC-2",
+      "family": "Access Control",
+      "title": "Account Management",
+      "description": "Establish, document, and manage information system accounts: define account types, assign owners, require approvals to create accounts, and review accounts periodically for continued need."
+    },
+    {
+      "id": "AC-3",
+      "family": "Access Control",
+      "title": "Access Enforcement",
+      "description": "Enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies."
+    },
+    {
+      "id": "AC-6",
+      "family": "Access Control",
+      "title": "Least Privilege",
+      "description": "Grant users and processes only the access strictly required to accomplish assigned tasks, and restrict use of privileged accounts and functions."
+    },
+    {
+      "id": "AC-17",
+      "family": "Access Control",
+      "title": "Remote Access",
+      "description": "Authorize, monitor, and control remote access methods, and apply protections such as encryption to remote connections to the organization's systems."
+    },
+    {
+      "id": "AU-2",
+      "family": "Audit and Accountability",
+      "title": "Event Logging",
+      "description": "Identify the events the system must log, coordinate the selection of auditable events across the organization, and review and update the logged event set over time."
+    },
+    {
+      "id": "AU-6",
+      "family": "Audit and Accountability",
+      "title": "Audit Record Review, Analysis, and Reporting",
+      "description": "Review and analyze audit records for indications of inappropriate or unusual activity and report findings to designated personnel."
+    },
+    {
+      "id": "AT-2",
+      "family": "Awareness and Training",
+      "title": "Literacy Training and Awareness",
+      "description": "Provide security and privacy awareness training to system users, including recognition of social engineering and reporting of suspicious behavior, on hire and periodically thereafter."
+    },
+    {
+      "id": "CM-2",
+      "family": "Configuration Management",
+      "title": "Baseline Configuration",
+      "description": "Develop, document, and maintain a current baseline configuration of the system and review and update it as part of system changes."
+    },
+    {
+      "id": "CM-8",
+      "family": "Configuration Management",
+      "title": "System Component Inventory",
+      "description": "Develop and maintain an accurate inventory of system components, including the information needed for tracking and reporting."
+    },
+    {
+      "id": "CP-9",
+      "family": "Contingency Planning",
+      "title": "System Backup",
+      "description": "Conduct backups of user-level and system-level information and protect the confidentiality, integrity, and availability of backup information."
+    },
+    {
+      "id": "CP-10",
+      "family": "Contingency Planning",
+      "title": "System Recovery and Reconstitution",
+      "description": "Provide for the recovery and reconstitution of the system to a known state after a disruption, compromise, or failure."
+    },
+    {
+      "id": "IA-2",
+      "family": "Identification and Authentication",
+      "title": "Identification and Authentication (Organizational Users)",
+      "description": "Uniquely identify and authenticate organizational users and associate that identity with processes acting on their behalf."
+    },
+    {
+      "id": "IA-5",
+      "family": "Identification and Authentication",
+      "title": "Authenticator Management",
+      "description": "Manage system authenticators, including initial distribution, complexity and rotation requirements, and protection of credentials such as passwords and keys."
+    },
+    {
+      "id": "IR-4",
+      "family": "Incident Response",
+      "title": "Incident Handling",
+      "description": "Implement a coordinated incident handling capability covering preparation, detection and analysis, containment, eradication, and recovery."
+    },
+    {
+      "id": "IR-6",
+      "family": "Incident Response",
+      "title": "Incident Reporting",
+      "description": "Require personnel to report suspected incidents within defined timeframes and report incident information to designated authorities."
+    },
+    {
+      "id": "RA-5",
+      "family": "Risk Assessment",
+      "title": "Vulnerability Monitoring and Scanning",
+      "description": "Monitor and scan for vulnerabilities in the system, analyze results, and remediate legitimate vulnerabilities within risk-based timeframes."
+    },
+    {
+      "id": "SC-7",
+      "family": "System and Communications Protection",
+      "title": "Boundary Protection",
+      "description": "Monitor and control communications at external and key internal boundaries of the system using mechanisms such as firewalls and gateways."
+    },
+    {
+      "id": "SC-13",
+      "family": "System and Communications Protection",
+      "title": "Cryptographic Protection",
+      "description": "Implement approved cryptography to protect the confidentiality and integrity of information in accordance with applicable laws and standards."
+    },
+    {
+      "id": "SC-28",
+      "family": "System and Communications Protection",
+      "title": "Protection of Information at Rest",
+      "description": "Protect the confidentiality and integrity of information at rest, for example through encryption or cryptographic mechanisms."
+    },
+    {
+      "id": "SI-2",
+      "family": "System and Information Integrity",
+      "title": "Flaw Remediation",
+      "description": "Identify, report, and correct system flaws, test patches before installation, and install security-relevant updates within defined timeframes."
+    },
+    {
+      "id": "SI-4",
+      "family": "System and Information Integrity",
+      "title": "System Monitoring",
+      "description": "Monitor the system to detect attacks, indicators of potential attacks, and unauthorized connections, and identify unauthorized use of the system."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "description": "Hand-labeled correct mappings for sample_policy.md against the NIST 800-53 subset. This is the ground truth the evaluation harness scores model output against. Labels reflect a defensible assessor reading; reasonable people might differ on a few partials, which is itself a useful discussion point in a review.",
+  "framework_id": "NIST_SP_800-53_R5",
+  "policy_file": "data/sample_policies/sample_policy.md",
+  "mappings": [
+    {"statement_id": "P1", "control_id": "AT-2", "coverage": "full"},
+
+    {"statement_id": "P2", "control_id": "AC-6", "coverage": "full"},
+    {"statement_id": "P2", "control_id": "AC-2", "coverage": "full"},
+    {"statement_id": "P2", "control_id": "AC-3", "coverage": "partial"},
+
+    {"statement_id": "P3", "control_id": "IA-2", "coverage": "full"},
+    {"statement_id": "P3", "control_id": "AC-17", "coverage": "full"},
+
+    {"statement_id": "P4", "control_id": "IA-5", "coverage": "full"},
+
+    {"statement_id": "P5", "control_id": "SC-28", "coverage": "full"},
+    {"statement_id": "P5", "control_id": "SC-13", "coverage": "full"},
+
+    {"statement_id": "P6", "control_id": "AU-6", "coverage": "full"},
+    {"statement_id": "P6", "control_id": "AU-2", "coverage": "partial"},
+
+    {"statement_id": "P7", "control_id": "IR-6", "coverage": "full"},
+    {"statement_id": "P7", "control_id": "IR-4", "coverage": "full"},
+
+    {"statement_id": "P8", "control_id": "RA-5", "coverage": "full"},
+    {"statement_id": "P8", "control_id": "SI-2", "coverage": "partial"},
+
+    {"statement_id": "P10", "control_id": "CP-9", "coverage": "full"},
+    {"statement_id": "P10", "control_id": "CP-10", "coverage": "partial"}
+  ]
+}
