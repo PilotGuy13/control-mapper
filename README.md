@@ -68,7 +68,7 @@ gaps. Adding a framework is just another JSON file plus a gold set — no code c
 ## Quickstart
 
 ```bash
-git clone <your-repo-url> && cd control-mapper
+git clone https://github.com/PilotGuy13/control-mapper && cd control-mapper
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
