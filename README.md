@@ -147,7 +147,6 @@ streamlit run app.py
 
 ![Streamlit UI: pick a framework, map a policy, view coverage and gaps](assets/ui-screenshot.png)
 
-'''
 
 Run the **tests** (offline):
 
