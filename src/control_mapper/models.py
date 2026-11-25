@@ -9,8 +9,35 @@ from __future__ import annotations
 
 from enum import Enum
 from typing import List, Optional
+from urllib.parse import urlparse
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
+
+# Publisher pages a framework may link to. Links come only from the framework JSON
+# in this repo, never from model output or user input.
+ALLOWED_SOURCE_HOSTS = frozenset({"csrc.nist.gov", "www.iso.org", "www.aicpa-cima.com"})
+_LINK_BREAKERS = frozenset("()[]<>\"'`")
+
+
+def check_source_url(url: Optional[str]) -> Optional[str]:
+    """Allow only https URLs on an allowlisted host, with no userinfo or port."""
+    if url is None:
+        return None
+    # Whitespace, control characters (incl. DEL) and anything that can break out of a
+    # Markdown link or an HTML attribute are refused anywhere in the URL.
+    if any(
+        ch.isspace() or ord(ch) < 32 or ord(ch) == 0x7F or ch in _LINK_BREAKERS
+        for ch in url
+    ):
+        raise ValueError("source_url contains a character that is not allowed")
+    parsed = urlparse(url)
+    if (
+        parsed.scheme != "https"
+        or parsed.hostname not in ALLOWED_SOURCE_HOSTS
+        or parsed.netloc != parsed.hostname
+    ):
+        raise ValueError("source_url must be https on an allowlisted publisher host")
+    return url
 
 
 class CoverageLevel(str, Enum):
@@ -28,6 +55,12 @@ class Control(BaseModel):
     family: str = Field(..., description="Control family, e.g. 'Access Control'.")
     title: str
     description: str
+    source_url: Optional[str] = None
+
+    @field_validator("source_url")
+    @classmethod
+    def _source_url_allowlisted(cls, v: Optional[str]) -> Optional[str]:
+        return check_source_url(v)
 
 
 class Framework(BaseModel):
@@ -37,6 +70,12 @@ class Framework(BaseModel):
     framework_name: str
     controls: List[Control]
     source_note: Optional[str] = None
+    source_url: Optional[str] = None
+
+    @field_validator("source_url")
+    @classmethod
+    def _source_url_allowlisted(cls, v: Optional[str]) -> Optional[str]:
+        return check_source_url(v)
 
     def control_ids(self) -> set[str]:
         return {c.id for c in self.controls}
