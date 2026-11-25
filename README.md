@@ -74,6 +74,8 @@ gaps. Adding a framework is just another JSON file plus a gold set — no code c
 
 ## Quickstart
 
+Requires Python 3.11 or later.
+
 ```bash
 git clone <your-repo-url> && cd control-mapper
 python -m venv .venv && source .venv/bin/activate
@@ -172,7 +174,7 @@ pytest
 ## Run locally (web UI)
 
 All commands run in a terminal on your Mac, from the repo root, with the virtual
-environment active. The UI needs Streamlit 1.67.0 or later. If you installed before
+environment active. The UI needs Python 3.11 or later and Streamlit 1.67.0 or later. If you installed before
 this version, run `pip install -r requirements.txt` again.
 
 Start the app:
@@ -203,7 +205,7 @@ your shell before you start the app. Load it with the three `set -a` / `source .
 / `set +a` commands above, then start the app again. If the key is missing, the app
 says "Live mode needs an API key, and none is set."
 
-![Streamlit UI: pick a framework, map a policy, view coverage and gaps](assets/ui-screenshot.png)
+![Crosswalk tab: a fictional policy compared across NIST 800-53, ISO 27001 and SOC 2, with coverage, gaps and unmapped statements](assets/ui-screenshot.png)
 
 ## Reviewing mappings
 
@@ -216,7 +218,8 @@ says "Live mode needs an API key, and none is set."
   `crosswalk-draft.xlsx`) contain every AI mapping, reviewed or not.
 - The accepted downloads on the Review tab (`crosswalk-accepted.csv`,
   `crosswalk-accepted.xlsx`) contain accepted mappings only. Each row includes the
-  decision, coverage, AI coverage and reason. These downloads stay disabled until you
+  decision, coverage and AI coverage, plus two reason columns: `reason` (why you
+  accepted or rejected) and `coverage_reason` (why you changed the coverage). These downloads stay disabled until you
   accept at least one mapping.
 - In this phase, decisions last for the browser session only. A page reload, a
   closed tab or an app restart loses them. Download the accepted files to keep them.
