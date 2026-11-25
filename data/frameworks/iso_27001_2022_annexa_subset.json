@@ -2,6 +2,7 @@
   "framework_id": "ISO_IEC_27001_2022",
   "framework_name": "ISO/IEC 27001:2022 Annex A (subset)",
   "source_note": "Control reference numbers (e.g. A.5.15) and their standard short titles are factual identifiers from ISO/IEC 27001:2022 Annex A. ISO/IEC 27001:2022 is a copyrighted standard; the descriptions below are original condensed summaries written for this demo and are NOT the official ISO control text. For authoritative wording, consult the licensed standard.",
+  "source_url": "https://www.iso.org/standard/27001",
   "controls": [
     {
       "id": "A.5.1",

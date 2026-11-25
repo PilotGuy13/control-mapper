@@ -1,5 +1,7 @@
 # Control Mapper
 
+Last updated: 25 Nov 2026
+
 ![Crosswalk workbook: one policy mapped across NIST 800-53, ISO 27001, and SOC 2](assets/crosswalk-screenshot.png)
 
 
@@ -131,28 +133,95 @@ The `.xlsx` has four sheets:
 | Mappings | Long, auditable detail: statement, framework, control, coverage, confidence, rationale (auto-filtered) |
 | Gaps | Controls in each framework that no statement covered |
 
-Run against the **live model** (drop `--offline`, set your key):
+Run against the **live model** (drop `--offline`). This sends the policy text to
+Anthropic. First copy the example file:
 
 ```bash
-cp .env.example .env        # add your key
-export $(grep -v '^#' .env | xargs)
+cp .env.example .env
+```
+
+Open `.env` in your editor and set `ANTHROPIC_API_KEY` there yourself. Do not paste
+the key into a command, a ticket or chat. Then load the file into your shell, one
+command at a time:
+
+```bash
+set -a
+```
+
+```bash
+source .env
+```
+
+```bash
+set +a
+```
+
+`set -a` exports every variable that `source` defines, so the key never appears on
+the command line. Then run:
+
+```bash
 PYTHONPATH=src:. python -m eval.evaluate --all
 ```
-
-Launch the **UI** (framework picker in the sidebar):
-
-```bash
-streamlit run app.py
-```
-
-![Streamlit UI: pick a framework, map a policy, view coverage and gaps](assets/ui-screenshot.png)
-
 
 Run the **tests** (offline):
 
 ```bash
 pytest
 ```
+
+## Run locally (web UI)
+
+All commands run in a terminal on your Mac, from the repo root, with the virtual
+environment active. The UI needs Streamlit 1.67.0 or later. If you installed before
+this version, run `pip install -r requirements.txt` again.
+
+Start the app:
+
+```bash
+streamlit run app.py
+```
+
+You should see a "Local URL" of `http://127.0.0.1:8501`. Open it in your browser.
+The app binds to 127.0.0.1 only (set in `.streamlit/config.toml`), so other machines
+on your network cannot reach it.
+
+The app has three working tabs:
+
+| Tab | What it does |
+|---|---|
+| Map | Maps the policy to one framework for a quick look |
+| Crosswalk | Compares two or three frameworks over the same statements; draft downloads |
+| Review | Accept, reject or correct each mapping of the latest crosswalk; accepted downloads |
+
+Controls, Plan, Verify and Dashboard are placeholders marked "Coming in phase 2".
+
+**Offline demo mode** is on by default (sidebar, Settings, "Offline demo (no API
+key)"). It uses a deterministic stub. It needs no API key and makes no network calls.
+
+**Live mode** sends your policy text to Anthropic. It needs `ANTHROPIC_API_KEY` in
+your shell before you start the app. Load it with the three `set -a` / `source .env`
+/ `set +a` commands above, then start the app again. If the key is missing, the app
+says "Live mode needs an API key, and none is set."
+
+![Streamlit UI: pick a framework, map a policy, view coverage and gaps](assets/ui-screenshot.png)
+
+## Reviewing mappings
+
+- Every AI mapping is a draft. It starts as Pending on the Review tab.
+- Accepting a mapping needs no reason. To reject a mapping or change its coverage
+  (full or partial), you must write a reason. To mark coverage as none, reject the
+  mapping instead.
+- There is no bulk accept. You decide on each mapping one at a time.
+- The draft downloads on the Crosswalk tab (`crosswalk-draft.csv`,
+  `crosswalk-draft.xlsx`) contain every AI mapping, reviewed or not.
+- The accepted downloads on the Review tab (`crosswalk-accepted.csv`,
+  `crosswalk-accepted.xlsx`) contain accepted mappings only. Each row includes the
+  decision, coverage, AI coverage and reason. These downloads stay disabled until you
+  accept at least one mapping.
+- In this phase, decisions last for the browser session only. A page reload, a
+  closed tab or an app restart loses them. Download the accepted files to keep them.
+- If you run the crosswalk again with the same policy name, your decisions carry
+  over. If you edit a statement's text, that statement's mappings go back to Pending.
 
 ## Example: crosswalk output (offline)
 
@@ -202,6 +271,7 @@ control-mapper/
 │   ├── analysis.py      # deterministic gap / over-coverage analysis
 │   ├── crosswalk.py     # evidence-anchored cross-framework crosswalk
 │   ├── export.py        # CSV + formatted XLSX export of the crosswalk
+│   ├── review.py        # human review: accept / reject / correct, reason rule
 │   └── cli.py           # command-line interface (single + crosswalk modes)
 ├── data/
 │   ├── frameworks/      # NIST, ISO 27001:2022, SOC 2 subsets
@@ -211,7 +281,8 @@ control-mapper/
 │   ├── stub_client.py   # deterministic, framework-aware offline client
 │   └── evaluate.py      # precision / recall / F1 harness (per framework / --all)
 ├── tests/               # pytest, fully offline
-└── app.py               # Streamlit UI with framework picker
+├── .streamlit/config.toml # binds the UI to 127.0.0.1 only
+└── app.py               # Streamlit UI: Map, Crosswalk, Review tabs (phase 2 tabs are placeholders)
 ```
 
 ## Roadmap

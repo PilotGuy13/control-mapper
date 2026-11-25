@@ -1,0 +1,16 @@
+[server]
+# Loopback only: the app is never reachable from the network.
+address = "127.0.0.1"
+
+[theme]
+# 5.93:1 contrast on white (WCAG AA), replacing the default #FF4B4B.
+primaryColor = "#c7141a"
+
+[client]
+# Hide the developer menu, and never show exception details or tracebacks in the browser.
+toolbarMode = "minimal"
+showErrorDetails = "none"
+
+[browser]
+# No usage telemetry leaves the machine.
+gatherUsageStats = false

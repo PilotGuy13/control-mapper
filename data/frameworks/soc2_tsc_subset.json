@@ -2,6 +2,7 @@
   "framework_id": "SOC2_TSC_2017",
   "framework_name": "SOC 2 Trust Services Criteria (2017, rev. 2022) (subset)",
   "source_note": "Criteria reference numbers (e.g. CC6.1) and category names are factual identifiers from the AICPA Trust Services Criteria. The TSC is copyrighted by the AICPA; the descriptions below are original condensed summaries written for this demo and are NOT the official AICPA criteria or points of focus. For authoritative wording, consult the AICPA publication.",
+  "source_url": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022",
   "controls": [
     {
       "id": "CC1.4",

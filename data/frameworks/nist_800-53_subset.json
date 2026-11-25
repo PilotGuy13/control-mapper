@@ -2,6 +2,7 @@
   "framework_id": "NIST_SP_800-53_R5",
   "framework_name": "NIST SP 800-53 Rev. 5 (subset)",
   "source_note": "Control identifiers and family names are from NIST SP 800-53 Rev. 5, a U.S. Government publication in the public domain. Descriptions below are condensed summaries written for this demo and are not the official control text.",
+  "source_url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
   "controls": [
     {
       "id": "AC-2",
